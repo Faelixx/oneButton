@@ -1,0 +1,15 @@
+{
+  "name": "onebutt",
+  "version": "1.0.0",
+  "description": "One button that plays a sound",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "author": "Sasha \"Nasty G\" Young",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
