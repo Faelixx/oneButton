@@ -20,5 +20,5 @@ server.listen(PORT, () => {
 });
 
 app.get('/', (req, res) => {
-  res.render("mainpage");
+  res.render("index");
 });
