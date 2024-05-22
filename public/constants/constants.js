@@ -22,7 +22,24 @@ function loadSound(soundName, soundPath) {
 }
 
 loadSound('tigerShot', '../audio/tiger-shot.mp3');
+loadSound('sagat-dp', '../audio/sagat-dp.mp3');
+loadSound('sagat-dk', '../audio/sagat-dk.mp3');
+loadSound('sagat-worst', '../audio/sagat-worst.mp3');
 
+loadSound('ryu-hadouken', '../audio/ryu-hadouken.mp3');
+loadSound('ryu-monkey', '../audio/ryu-monkey.mp3');
+loadSound('ryu-shoryuken', '../audio/ryu-shoryuken.mp3');
+loadSound('ryu-serious', '../audio/ryu-serious.mp3');
+
+loadSound('chun-kikoken', '../audio/chun-kikoken.mp3');
+loadSound('chun-hizonchiu', '../audio/chun-hizonchiu.mp3');
+loadSound('chun-dodge', '../audio/chun-dodge.mp3');
+loadSound('chun-weak', '../audio/chun-weak.mp3');
+
+loadSound('dan-woohoo', '../audio/dan-woohoo.mp3');
+loadSound('dan-victory', '../audio/dan-victory.mp3');
+loadSound('dan-back', '../audio/dan-back.mp3');
+loadSound('dan-father', '../audio/dan-father.mp3');
 
 function playSound(soundName) {
   const buffer = sounds[soundName];
