@@ -6,7 +6,8 @@ $(() => {
     keyAction[ev.key][ev.type]()
   }
   
-  ['keydown'].forEach((evType) => {
+  ['keydown', 'keyup'].forEach((evType) => {
     document.body.addEventListener(evType, keyHandler);
   });
 });
+ const socket = new WebSocket()

@@ -3,8 +3,9 @@ tigerShotSound.src = "../audio/tiger-shot.mp3";
 
 const oneShot = {
   tigerShot() { tigerShotSound.play(); },
+  tigerShotStop() { tigerShotSound.stop(); }
 };
 
 const keyAction = {
-  q: { keydown: oneShot.tigerShot }
+  1: { keydown: oneShot.tigerShot }
 };
