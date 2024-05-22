@@ -56,24 +56,73 @@ function playSound(soundName) {
 const oneShot = {
   tigerShot() {
       playSound('tigerShot');
-    }
+    },
+  dpSagat() {
+      playSound('sagat-dp');
+    },
+  dkSagat() {
+      playSound('sagat-dk');
+    },
+  worstSagat() {
+      playSound('sagat-worst');
+    },
+    //
+  hadoukenRyu() {
+      playSound('ryu-hadouken');
+    },
+  monkeyRyu() {
+      playSound('ryu-monkey');
+    },
+  shoryukenRyu() {
+      playSound('ryu-shoryuken');
+    },
+  seriousRyu() {
+      playSound('ryu-serious');
+    },
+    //
+  kikokenChun() {
+      playSound('chun-kikoken');
+    },
+  hizonchiuChun() {
+      playSound('chun-hizonchiu');
+    },
+  dodgeChun() {
+      playSound('chun-dodge');
+    },
+  weakChun() {
+      playSound('chun-weak');
+    },
+    //
+    wooDan() {
+      playSound('dan-woohoo');
+    },
+  vicDan() {
+      playSound('dan-victory');
+    },
+  backDan() {
+      playSound('dan-back');
+    },
+  daddyDan() {
+      playSound('dan-father');
+    },
+    //
 }
 
 const keyAction = {
   1: { keydown: oneShot.tigerShot },
-  2: { keydown: oneShot.tigerShot },
-  3: { keydown: oneShot.tigerShot },
-  4: { keydown: oneShot.tigerShot },
-  'q': { keydown: oneShot.tigerShot },
-  'w': { keydown: oneShot.tigerShot },
-  'e': { keydown: oneShot.tigerShot },
-  'r': { keydown: oneShot.tigerShot },
-  'a': { keydown: oneShot.tigerShot },
-  's': { keydown: oneShot.tigerShot },
-  'd': { keydown: oneShot.tigerShot },
-  'f': { keydown: oneShot.tigerShot },
-  'z': { keydown: oneShot.tigerShot },
-  'x': { keydown: oneShot.tigerShot },
-  'c': { keydown: oneShot.tigerShot },
-  'v': { keydown: oneShot.tigerShot },
+  2: { keydown: oneShot.dpSagat },
+  3: { keydown: oneShot.dkSagat },
+  4: { keydown: oneShot.worstSagat },
+  'q': { keydown: oneShot.hadoukenRyu },
+  'w': { keydown: oneShot.monkeyRyu },
+  'e': { keydown: oneShot.shoryukenRyu },
+  'r': { keydown: oneShot.seriousRyu },
+  'a': { keydown: oneShot.kikokenChun },
+  's': { keydown: oneShot.hizonchiuChun },
+  'd': { keydown: oneShot.dodgeChun },
+  'f': { keydown: oneShot.weakChun },
+  'z': { keydown: oneShot.wooDan },
+  'x': { keydown: oneShot.vicDan },
+  'c': { keydown: oneShot.backDan },
+  'v': { keydown: oneShot.daddyDan },
 };
