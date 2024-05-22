@@ -25,6 +25,34 @@
   <script defer src="/scripts/audio.js"></script>
   <script defer src="../constants/constants.js"></script>
 
+  <!-- <script>
+    $(() => {
+      const socket = new WebSocket('ws://localhost:1337');
+
+      socket.onmessage = function(event) {
+        const arrayBuffer = event.data;
+        if (typeof arrayBuffer === 'string') {
+          console.error(arrayBuffer);
+          return;
+        }
+      
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        audioContext.decodeAudioData(event.data, buffer => {
+          const source = audioContext.createBufferSource();
+          source.buffer = buffer;
+          source.connect(audioContext.destination);
+          source.start(0);
+        });
+      };
+
+      document.addEventListener('keydown', function(event) {
+        if (event.key === '1') {
+          socket.send(event.key)
+        }
+      })
+    })
+
+  </script> -->
 </head>
 <body>
   <img src="/images/One-Button-2-11-2024 (1).png" alt="Tiger shot" id="logo">
