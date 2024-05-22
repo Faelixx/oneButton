@@ -11,29 +11,35 @@
 // };
 
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const sounds = {};
 
-let tigerShotBuffer;
-fetch('../audio/tiger-shot.mp3')
-.then(res => res.arrayBuffer())
-.then(data => audioContext.decodeAudioData(data))
-.then(buffer => tigerShotBuffer = buffer)
-.catch(e => console.error('Error loading audio file: ', e));
+function loadSound(soundName, soundPath) {
+  fetch(soundPath)
+  .then(res => res.arrayBuffer())
+  .then(data => audioContext.decodeAudioData(data))
+  .then(buffer => sounds[soundName] = buffer)
+  .catch(e => console.error('Error loading audio file: ', e));
+}
 
-function playSound(buffer) {
-  const source = audioContext.createBufferSource();
-  source.buffer = buffer;
-  source.connect(audioContext.destination);
-  source.start(0);
+loadSound('tigerShot', '../audio/tiger-shot.mp3');
+
+
+function playSound(soundName) {
+  const buffer = sounds[soundName];
+  if (buffer) {
+    const source = audioContext.createBufferSource();
+    source.buffer = buffer;
+    source.connect(audioContext.destination);
+    source.start(0);
+  } else {
+    console.error(`Sound '${soundName}' not found`)
+  }
 }
 
 const oneShot = {
   tigerShot() {
-    if (tigerShotBuffer) {
-      playSound(tigerShotBuffer);
-    } else {
-      console.error('Audio buffer not ready');
+      playSound('tigerShot');
     }
-  }
 }
 
 const keyAction = {
