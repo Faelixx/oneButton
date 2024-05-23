@@ -122,7 +122,7 @@ const keyAction = {
   'd': { keydown: oneShot.dodgeChun },
   'f': { keydown: oneShot.weakChun },
   'z': { keydown: oneShot.wooDan },
-  'x': { keydown: oneShot.vicDan },
-  'c': { keydown: oneShot.backDan },
+  'x': { keydown: oneShot.backDan },
+  'c': { keydown: oneShot.vicDan },
   'v': { keydown: oneShot.daddyDan },
 };
