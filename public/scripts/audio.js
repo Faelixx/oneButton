@@ -6,7 +6,7 @@ $(() => {
     keyAction[ev.key][ev.type]()
   }
   
-  ['keydown', 'keyup'].forEach((evType) => {
+  ['keydown'].forEach((evType) => {
     document.body.addEventListener(evType, keyHandler);
   });
 });

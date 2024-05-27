@@ -9,6 +9,9 @@
     body {
       background: radial-gradient(circle, #322538, #1f1f1f);
       display: flex;
+    }
+    .container {
+      display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: center;
@@ -17,48 +20,29 @@
 
     button {
       background: none;
+      /* border: none; */
     }
   </style>
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
   <script defer src="/scripts/audio.js"></script>
+  <script defer src="/scripts/gifs.js"></script>
   <script defer src="../constants/constants.js"></script>
 
-  <!-- <script>
-    $(() => {
-      const socket = new WebSocket('ws://localhost:1337');
+  <script>
 
-      socket.onmessage = function(event) {
-        const arrayBuffer = event.data;
-        if (typeof arrayBuffer === 'string') {
-          console.error(arrayBuffer);
-          return;
-        }
-      
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        audioContext.decodeAudioData(event.data, buffer => {
-          const source = audioContext.createBufferSource();
-          source.buffer = buffer;
-          source.connect(audioContext.destination);
-          source.start(0);
-        });
-      };
-
-      document.addEventListener('keydown', function(event) {
-        if (event.key === '1') {
-          socket.send(event.key)
-        }
-      })
-    })
-
-  </script> -->
+  </script>
 </head>
 <body>
-  <img src="/images/One-Button-2-11-2024 (1).png" alt="Tiger shot" id="logo">
+  <div class="container">
+    <img src="/images/One-Button-2-11-2024 (1).png" alt="Tiger shot" id="logo">
     <div class="sagat">
-      <!-- Tiger shot -->
-      <img src="/images/sagat.gif" alt="Tiger shot">
+      <button id="tiger-shot">
+        <!-- Tiger shot -->
+        <img src="/images/sagat.gif" alt="Tiger shot">
+
+      </button>
       
       <!-- Tiger Uppercut -->
       <img src="/images/sagat-dp.gif" alt="Tiger Uppercut">
@@ -107,6 +91,8 @@
   
   <!-- Father -->
   <img src="/images/dan/dan-cry.gif" alt="I did it father!">
+  </div>
 </div>
 </body>
 </html>
+

@@ -1,15 +1,3 @@
-// const tigerShotSound = new Audio();
-// tigerShotSound.src = "../audio/tiger-shot.mp3";
-
-// const oneShot = {
-//   tigerShot() { tigerShotSound.play(); },
-//   tigerShotStop() { tigerShotSound.stop(); }
-// };
-
-// const keyAction = {
-//   1: { keydown: oneShot.tigerShot }
-// };
-
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const sounds = {};
 
@@ -114,8 +102,8 @@ const keyAction = {
   3: { keydown: oneShot.dkSagat },
   4: { keydown: oneShot.worstSagat },
   'q': { keydown: oneShot.hadoukenRyu },
-  'w': { keydown: oneShot.monkeyRyu },
-  'e': { keydown: oneShot.shoryukenRyu },
+  'w': { keydown: oneShot.shoryukenRyu },
+  'e': { keydown: oneShot.monkeyRyu },
   'r': { keydown: oneShot.seriousRyu },
   'a': { keydown: oneShot.kikokenChun },
   's': { keydown: oneShot.hizonchiuChun },
