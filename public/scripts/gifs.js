@@ -2,25 +2,61 @@
 // Then replace the img with a gif on 
 // keydown
 
-// document.addEventListener('keydown', (event) => {
-//   const tigerShot = document.getElementById("tiger-shot");
+const imgIds = {
+  //Sagat
+  tigerShot: document.getElementById('tiger-shot'),
+  tigerDp: document.getElementById('tiger-uppercut'),
+  tigerKDp: document.getElementById('tiger-knee'),
+  sagatTaunt: document.getElementById('sagat-taunt'),
+  //Ryu
+  ryuHadouken: document.getElementById('ryu-hadouken'),
+  ryuDp: document.getElementById('ryu-shoryuken'),
+  ryuTatsu: document.getElementById('ryu-tastu'),
+  ryuTaunt: document.getElementById('ryu-taunt'),
+  //Chun-Li
+  chunKiko: document.getElementById('chun-kiko'),
+  chunOh: document.getElementById('chun-oh'),
+  chunKick: document.getElementById('chun-kick'),
+  chunTaunt: document.getElementById('chun-taunt'),
+  //Dan
+  danYahoo: document.getElementById('dan-yahoo'),
+  danSuper: document.getElementById('dan-super'),
+  danVictory: document.getElementById('dan-victory'),
+  danFather: document.getElementById('dan-father'),
+  
+}
 
-//   const specificKey = 'a';
-
-//   if (event.key === specificKey) {
-//     tigerShot.src = '';
-//   };
-// });
-
-// document.addEventListener('keyup', (event) => {
-//   const tigerShotImg = document.getElementById("tiger-shot");
-
-//   const specificKey = 'a';
-
-//   if (event.key === specificKey) {
-//     tigerShotImg.src = '/images/sagat.gif'
-//   }
-// })
+const imgs = {
+  sagat: {
+    still: "images/stills/sagat-still.gif",
+    tigerShot: "images/2.gif",
+    tigerDp: "images/sagat-dp.gif",
+    tigerKDp: "images/tigerKnee.gif",
+    sagatTaunt: "images/sagat-taunt.gif"
+  },
+  ryu: {
+    still: "images/stills/Ryu-still.gif",
+    ryuHadouken: "images/ryu/Ryuhadoken-1.gif",
+    ryuDp: "images/ryu/ryu-shoryuken.gif",
+    ryuTatsu: "images/ryu/tatsu.gif",
+    ryuTaunt: "images/ryu/Ryugif-1.gif",
+  },
+  chun: {
+    still: "images/stills/chun-still.png",
+    chunKiko: "images/chun/chun-kiko.gif",
+    chunOh: "images/chun/chun-oh.gif",
+    chunKick: "images/chun/chun-kick.gif",
+    chunTaunt: "images/chun/chun-taunt.gif",
+  },
+  dan: {
+    still: "images/stills/dan-still.gif",
+    danYahoo: "images/dan/dan-yahoo.gif",
+    danSuper: "images/dan/dan-super.gif",
+    danVictory : "images/dan/mvc2-dan3.gif",
+    danFather : "images/dan/dan-cry.gif",
+    
+  }
+}
 
 const replaceImg = (img, newSrc) => {
   img.src = '';
@@ -28,7 +64,7 @@ const replaceImg = (img, newSrc) => {
 }
 
 const replaceImgAction = {
-  tigerShotReplace() {
+  tigerShotReplaceDown() {
     replaceImg(document.getElementById("tiger-shot"));
   },
 }
