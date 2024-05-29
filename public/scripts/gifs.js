@@ -28,7 +28,7 @@ const imgIds = {
 
 const imgs = {
   sagat: {
-    still: "images/stills/sagat-still.gif",
+    still: "images/stills/sagat-taunt.gif",
     tigerShot: "images/2.gif",
     tigerDp: "images/sagat-dp.gif",
     tigerKDp: "images/tigerKnee.gif",
@@ -54,21 +54,82 @@ const imgs = {
     danSuper: "images/dan/dan-super.gif",
     danVictory : "images/dan/mvc2-dan3.gif",
     danFather : "images/dan/dan-cry.gif",
-    
   }
 }
 
 const replaceImg = (img, newSrc) => {
-  img.src = '';
+  img.src = newSrc;
   console.log("Image changed!");
 }
 
 const replaceImgAction = {
-  tigerShotReplaceDown() {
-    replaceImg(document.getElementById("tiger-shot"));
+  isPlaying: false,
+
+  cancel() {
+    clearTimeout(this.timeoutID);
+    this.isPlaying = false;
   },
-}
+
+  tigerShotReplaceDown() {
+    if (!this.isPlaying){
+      this.isPlaying = true;
+      replaceImg(imgIds.tigerShot, imgs.sagat.tigerShot);
+    }
+  },
+
+  tigerShotReplaceUp() {
+    if (typeof this.timeoutID === "number") {
+      this.cancel();
+    }
+
+    this.timeoutID = setTimeout(() => {
+      replaceImg(imgIds.tigerShot, imgs.sagat.still);
+      this.isPlaying = false;
+    }, 1000)
+
+  },
+
+  //
+
+  tigerDpReplaceDown() {
+    if (!this.isPlaying){
+      this.isPlaying = true;
+      replaceImg(imgIds.tigerDp, imgs.sagat.tigerDp);
+    }
+  },
+
+  tigerDpReplaceUp() {
+    if (typeof this.timeoutID === "number") {
+      this.cancel();
+    }
+
+    this.timeoutID = setTimeout(() => {
+      replaceImg(imgIds.tigerDp, imgs.sagat.still);
+      this.isPlaying = false;
+    }, 1300)
+
+  },
+
+  //
+
+};
+
 
 const imgAction = {
-  'a': { keydown: replaceImgAction.tigerShotReplace }
-}
+  1: { 
+    keydown: replaceImgAction.tigerShotReplaceDown,
+    keyup: replaceImgAction.tigerShotReplaceUp
+    },
+  2: { 
+    keydown: replaceImgAction.tigerDpReplaceDown,
+    keyup: replaceImgAction.tigerDpReplaceUp
+    }
+};
+
+replaceImgAction.tigerShotReplaceDown = replaceImgAction.tigerShotReplaceDown.bind(replaceImgAction);
+replaceImgAction.tigerShotReplaceUp = replaceImgAction.tigerShotReplaceUp.bind(replaceImgAction);
+replaceImgAction.cancel = replaceImgAction.cancel.bind(replaceImgAction);
+
+replaceImgAction.tigerDpReplaceDown = replaceImgAction.tigerDpReplaceDown.bind(replaceImgAction);
+replaceImgAction.tigerDpReplaceUp = replaceImgAction.tigerDpReplaceUp.bind(replaceImgAction);
+replaceImgAction.cancel = replaceImgAction.cancel.bind(replaceImgAction);
