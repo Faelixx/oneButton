@@ -2,14 +2,37 @@
 // Then replace the img with a gif on 
 // keydown
 
-$(() => {
-  const tigerShotImg = document.getElementById("tiger-shot");
+// document.addEventListener('keydown', (event) => {
+//   const tigerShot = document.getElementById("tiger-shot");
 
-  const testFunc = () => alert('test');
+//   const specificKey = 'a';
 
-  if (tigerShotImg) {
-    tigerShotImg.addEventListener('click', testFunc);
-  }
+//   if (event.key === specificKey) {
+//     tigerShot.src = '';
+//   };
+// });
 
-})
+// document.addEventListener('keyup', (event) => {
+//   const tigerShotImg = document.getElementById("tiger-shot");
 
+//   const specificKey = 'a';
+
+//   if (event.key === specificKey) {
+//     tigerShotImg.src = '/images/sagat.gif'
+//   }
+// })
+
+const replaceImg = (img, newSrc) => {
+  img.src = '';
+  console.log("Image changed!");
+}
+
+const replaceImgAction = {
+  tigerShotReplace() {
+    replaceImg(document.getElementById("tiger-shot"));
+  },
+}
+
+const imgAction = {
+  'a': { keydown: replaceImgAction.tigerShotReplace }
+}
