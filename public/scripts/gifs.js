@@ -18,34 +18,53 @@ const imgIds = getElementsByIds([
 
 const imgs = {
   sagat: {
-    still: "images/stills/sagat-taunt.gif",
+    still: "images/stills/256x128/sagat.png",
     tigerShot: "images/2.gif",
     tigerDp: "images/sagat-dp.gif",
     tigerKDp: "images/tigerKnee.gif",
     sagatTaunt: "images/sagat-taunt.gif"
   },
   ryu: {
-    still: "images/stills/Ryu-still.gif",
+    still: "images/stills/256x128/ryu.png",
     ryuHadouken: "images/ryu/Ryuhadoken-1.gif",
     ryuDp: "images/ryu/ryu-shoryuken.gif",
     ryuTatsu: "images/ryu/tatsu.gif",
     ryuTaunt: "images/ryu/Ryugif-1.gif",
   },
   chun: {
-    still: "images/stills/chun-still.png",
+    still: "images/stills/256x128/chun.png",
     chunKiko: "images/chun/chun-kiko.gif",
     chunOh: "images/chun/chun-oh.gif",
     chunKick: "images/chun/chun-kick.gif",
     chunTaunt: "images/chun/chun-taunt.gif",
   },
   dan: {
-    still: "images/stills/dan-still.gif",
+    still: "images/stills/256x128/dan.png",
     danYahoo: "images/dan/dan-yahoo.gif",
     danSuper: "images/dan/dan-super.gif",
     danVictory : "images/dan/mvc2-dan3.gif",
     danFather : "images/dan/dan-cry.gif",
   }
 }
+
+const resetAllImages = () => {
+  replaceImg(imgIds['tiger-shot'], imgs.sagat.still);
+  replaceImg(imgIds['tiger-uppercut'], imgs.sagat.still);
+  replaceImg(imgIds['tiger-knee'], imgs.sagat.still);
+  replaceImg(imgIds['sagat-taunt'], imgs.sagat.still);
+  replaceImg(imgIds['ryu-hadouken'], imgs.ryu.still);
+  replaceImg(imgIds['ryu-shoryuken'], imgs.ryu.still);
+  replaceImg(imgIds['ryu-tatsu'], imgs.ryu.still);
+  replaceImg(imgIds['ryu-taunt'], imgs.ryu.still);
+  replaceImg(imgIds['chun-kiko'], imgs.chun.still);
+  replaceImg(imgIds['chun-oh'], imgs.chun.still);
+  replaceImg(imgIds['chun-kick'], imgs.chun.still);
+  replaceImg(imgIds['chun-taunt'], imgs.chun.still);
+  replaceImg(imgIds['dan-yahoo'], imgs.dan.still);
+  replaceImg(imgIds['dan-super'], imgs.dan.still);
+  replaceImg(imgIds['dan-victory'], imgs.dan.still);
+  replaceImg(imgIds['dan-father'], imgs.dan.still);
+};
 
 const replaceImg = (img, newSrc) => {
   img.src = newSrc;
@@ -57,6 +76,7 @@ const createReplaceActions = (imgId, imgSrc, stillImgSrc, duration) => {
     replaceDown() {
       if (!this.isPlaying) {
         this.isPlaying = true;
+        resetAllImages();
         replaceImg(imgId, imgSrc);
       }
     },

@@ -2,7 +2,6 @@
 
 const express = require('express');
 const WebSocket = require('ws');
-const fs = require('fs')
 const path = require('path')
 const http = require('http');
 
@@ -11,18 +10,10 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 const PORT = 1337;
 
-const soundPath = path.join(__dirname, 'public/audio', 'tiger-shot.mp3');
-console.log('Loading sound from: ', soundPath);
-
-const sounds = {
-  '1': fs.readFileSync(soundPath),
-}
-
-app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 app.get('/', (req, res) => {
