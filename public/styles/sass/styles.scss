@@ -1,0 +1,72 @@
+body {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle, #322538, #1f1f1f);
+  font-size: 13px;
+}
+
+body {
+  background: radial-gradient(circle, #322538, #1f1f1f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sagat .chun .ryu .dan {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sagat img {
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  border-width: 2px;
+  border-color: rgba(255, 193, 0, 0.5);
+  border-style: solid;
+}
+
+.ryu img {
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  border-width: 2px;
+  border-color: rgba(255, 0, 0, 0.507);
+  border-style: solid;
+}
+
+.chun img {
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  border-width: 2px;
+  border-color: rgba(0, 132, 255, 0.507);
+  border-style: solid;
+}
+
+.dan img {
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  border-width: 2px;
+  border-color: #ff758980;
+  border-style: solid;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.title-container img {
+  max-width: 256px;
+  max-height: 128px;
+}
+
+.images-wrapper img {
+  max-width: 90px;
+  max-height: 50px;
+}
+
+
+
+

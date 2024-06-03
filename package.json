@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "npm test",
-    "start": "node server.js"
+    "start": "node server.js",
+    "sass": "sass --watch public/styles/sass:public/styles/css"
   },
   "author": "Sasha \"Nasty G\" Young",
   "license": "ISC",
