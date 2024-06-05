@@ -28,7 +28,7 @@ body .ryu img {
   border-top-right-radius: 30%;
   border-bottom-left-radius: 30%;
   border-width: 2px;
-  border-color: rgba(255, 193, 0, 0.5);
+  border-color: rgba(255, 0, 0, 0.507);
   border-style: solid;
 }
 body .chun {
@@ -40,7 +40,7 @@ body .chun img {
   border-top-right-radius: 30%;
   border-bottom-left-radius: 30%;
   border-width: 2px;
-  border-color: rgba(255, 193, 0, 0.5);
+  border-color: rgba(0, 132, 255, 0.507);
   border-style: solid;
 }
 body .dan {
@@ -52,7 +52,7 @@ body .dan img {
   border-top-right-radius: 30%;
   border-bottom-left-radius: 30%;
   border-width: 2px;
-  border-color: rgba(255, 193, 0, 0.5);
+  border-color: rgba(255, 117, 137, 0.5019607843);
   border-style: solid;
 }
 
@@ -86,6 +86,13 @@ body .dan img {
   align-items: center;
   justify-content: center;
   translate: 145px -140px;
+}
+
+.p1-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  translate: -145px -261px;
 }
 
 /*# sourceMappingURL=styles.css.map */
