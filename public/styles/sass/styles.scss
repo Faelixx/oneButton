@@ -85,23 +85,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   img {
     max-width: 1024px;
   }
 }
 
 .akuma-avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  translate: 145px -140px;
+  position: absolute;
+  bottom: 20px;
+  right: 250px;
 }
 
 .p1-avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  translate: -145px -261px;
+  position: absolute;
+  bottom: 20px;
+  left: 250px;
 }
 
 
