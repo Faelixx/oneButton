@@ -7,6 +7,9 @@ body {
 body {
   background: radial-gradient(circle, #322538, #1f1f1f);
 }
+body img {
+  margin: 3px;
+}
 body .sagat {
   display: flex;
   align-items: center;
@@ -56,6 +59,13 @@ body .dan img {
   border-style: solid;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .title-container {
   display: flex;
   align-items: center;
@@ -85,13 +95,13 @@ body .dan img {
 .akuma-avatar {
   position: absolute;
   bottom: 20px;
-  right: 250px;
+  right: 50px;
 }
 
 .p1-avatar {
   position: absolute;
   bottom: 20px;
-  left: 250px;
+  left: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */

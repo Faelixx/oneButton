@@ -6,6 +6,11 @@ body {
 
 body {
   background: radial-gradient(circle, #322538, #1f1f1f);
+
+  img {
+    margin: 3px;
+  }
+
   
   .sagat {
   display: flex;
@@ -60,8 +65,13 @@ body {
     border-style: solid;
     }
   }
+}
 
-  
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title-container {
@@ -94,13 +104,13 @@ body {
 .akuma-avatar {
   position: absolute;
   bottom: 20px;
-  right: 250px;
+  right: 50px;
 }
 
 .p1-avatar {
   position: absolute;
   bottom: 20px;
-  left: 250px;
+  left: 50px;
 }
 
 
