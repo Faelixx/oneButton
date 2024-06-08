@@ -4,6 +4,20 @@
 
 const p1 = document.getElementById("p1");
 
+const getElementsByIds = (ids) => {
+  return ids.reduce((acc, id) => {
+    acc[id] = document.getElementById(id);
+    return acc;
+  }, {});
+};
+
+const imgIds = getElementsByIds([
+  'tiger-shot', 'tiger-uppercut', 'tiger-knee', 'sagat-taunt', 
+  'ryu-hadouken', 'ryu-shoryuken', 'ryu-tatsu', 'ryu-taunt',
+  'chun-kiko', 'chun-oh', 'chun-kick', 'chun-taunt',
+  'dan-yahoo', 'dan-super', 'dan-victory', 'dan-father'
+]);
+
 const imgs = {
   sagat: {
     still: "images/stills/256x128/sagat.png",
@@ -38,15 +52,15 @@ const imgs = {
 
 const replaceImg = (img, newSrc) => {
   img.src = newSrc;
-  console.log("Image changed!");
 }
 
-const createReplaceActions = (imgSrc, duration) => {
+const createReplaceActions = (imgSrc, duration, imgId) => {
   return {
     replaceDown() {
       if (!this.isPlaying) {
         this.isPlaying = true;
         replaceImg(p1, imgSrc);
+        imgId.classList.add('flashing-animation');
       }
     },
 
@@ -58,6 +72,7 @@ const createReplaceActions = (imgSrc, duration) => {
           this.timeoutID = setTimeout(() => {
             replaceImg(p1, '');
             this.isPlaying = false;
+            imgId.classList.remove('flashing-animation');
           }, duration);
     }
   }
@@ -73,29 +88,29 @@ const replaceImgAction = {
 };
 
 const sagatActions = {
-  tigerShot: createReplaceActions(imgs.sagat.tigerShot, 1000),
-  tigerDp: createReplaceActions(imgs.sagat.tigerDp, 1300),
-  tigerKDp: createReplaceActions(imgs.sagat.tigerKDp, 500),
-  sagatTaunt: createReplaceActions(imgs.sagat.sagatTaunt, 900),
+  tigerShot: createReplaceActions(imgs.sagat.tigerShot, 1000, imgIds['tiger-shot']),
+  tigerDp: createReplaceActions(imgs.sagat.tigerDp, 1300, imgIds['tiger-uppercut']),
+  tigerKDp: createReplaceActions(imgs.sagat.tigerKDp, 500, imgIds['tiger-knee']),
+  sagatTaunt: createReplaceActions(imgs.sagat.sagatTaunt, 900, imgIds['sagat-taunt']),
 };
 const ryuActions = {
-  ryuHadouken: createReplaceActions(imgs.ryu.ryuHadouken, 1300),
-  ryuDp: createReplaceActions(imgs.ryu.ryuDp, 1300),
-  ryuTatsu: createReplaceActions(imgs.ryu.ryuTatsu, 1300),
-  ryuTaunt: createReplaceActions(imgs.ryu.ryuTaunt, 1300),
+  ryuHadouken: createReplaceActions(imgs.ryu.ryuHadouken, 1300, imgIds['ryu-hadouken']),
+  ryuDp: createReplaceActions(imgs.ryu.ryuDp, 1300, imgIds['ryu-shoryuken']),
+  ryuTatsu: createReplaceActions(imgs.ryu.ryuTatsu, 1300, imgIds['ryu-tatsu']),
+  ryuTaunt: createReplaceActions(imgs.ryu.ryuTaunt, 1300, imgIds['ryu-taunt']),
 
 };
 const chunActions = {
-  chunKiko: createReplaceActions(imgs.chun.chunKiko, 1300),
-  chunOh: createReplaceActions(imgs.chun.chunOh, 1300),
-  chunKick: createReplaceActions(imgs.chun.chunKick, 1300),
-  chunTaunt: createReplaceActions(imgs.chun.chunTaunt, 1300),
+  chunKiko: createReplaceActions(imgs.chun.chunKiko, 1300, imgIds['chun-kiko']),
+  chunOh: createReplaceActions(imgs.chun.chunOh, 1300, imgIds['chun-oh']),
+  chunKick: createReplaceActions(imgs.chun.chunKick, 1300, imgIds['chun-kick']),
+  chunTaunt: createReplaceActions(imgs.chun.chunTaunt, 1300, imgIds['chun-taunt']),
 };
 const danActions = {
-  danYahoo: createReplaceActions(imgs.dan.danYahoo, 1300),
-  danSuper: createReplaceActions(imgs.dan.danSuper, 2300),
-  danVictory: createReplaceActions(imgs.dan.danVictory, 1300),
-  danFather: createReplaceActions(imgs.dan.danFather, 800),
+  danYahoo: createReplaceActions(imgs.dan.danYahoo, 1300, imgIds['dan-yahoo']),
+  danSuper: createReplaceActions(imgs.dan.danSuper, 2300,imgIds['dan-super']),
+  danVictory: createReplaceActions(imgs.dan.danVictory, 1300, imgIds['dan-victory']),
+  danFather: createReplaceActions(imgs.dan.danFather, 800, imgIds['dan-father']),
 };
 
 Object.assign(replaceImgAction, sagatActions);

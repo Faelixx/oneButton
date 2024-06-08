@@ -1,3 +1,14 @@
+@keyframes blink {
+  50% {
+    background-color:white;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    background-color:white;
+  }
+}
+
 body {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: radial-gradient(circle, #322538, #1f1f1f);
@@ -113,5 +124,7 @@ body {
   left: 50px;
 }
 
-
-
+.flashing-animation {
+  animation: blink 75ms ease-in-out infinite;
+  animation-iteration-count: 5;
+}
