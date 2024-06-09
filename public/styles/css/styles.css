@@ -150,4 +150,10 @@ body .dan img {
   font-family: "Supernova", sans-serif;
 }
 
+button {
+  color: transparent;
+  background-color: transparent;
+  padding: 1px;
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -49,7 +49,6 @@ const imgs = {
   }
 }
 
-
 const replaceImg = (img, newSrc) => {
   img.src = newSrc;
 }
