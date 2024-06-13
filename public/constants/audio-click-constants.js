@@ -3,6 +3,7 @@ $(() => {
     button.addEventListener('click', () => {
       const soundId = button.getAttribute('data-sound');
       playSound(soundId);
+      });
     });
+
   });
-});
