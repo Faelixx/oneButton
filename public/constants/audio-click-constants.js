@@ -7,7 +7,6 @@ const handleTouchClick = (e) => {
 $(() => {
   document.querySelectorAll('[data-sound]').forEach(button => {
       button.addEventListener('click', handleTouchClick);
-      button.addEventListener('touchend', handleTouchClick);
     });
 
   });
