@@ -96,6 +96,8 @@ const oneShot = {
     //
 }
 
+
+
 const keyAction = {
   1: { keydown: oneShot.tigerShot },
   2: { keydown: oneShot.dpSagat },
