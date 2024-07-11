@@ -190,4 +190,31 @@ button {
   border: 0.01px;
 }
 
+.doc {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  color: red;
+}
+
+.doc p {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.instructions {
+  background: rgba(138, 105, 21, 0.1647058824);
+  min-width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .doc {
+    padding-left: 545px;
+    padding-right: 545px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

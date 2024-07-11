@@ -123,6 +123,8 @@ body {
     border-color: rgba(255, 117, 137, 0.5019607843);
     }
   }
+
+
 }
 
 .container {
@@ -196,3 +198,31 @@ button {
   padding: 0;
   border: 0.01px;
 }
+
+.doc {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  color: red;
+}
+
+.doc p {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.instructions {
+  background: #8a69152a;
+  min-width: 100%;
+}
+
+
+  @media only screen and (min-width: 768px) {
+    .doc {
+      padding-left: 545px;
+      padding-right: 545px;
+    }
+  }
