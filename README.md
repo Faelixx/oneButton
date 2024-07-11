@@ -20,16 +20,16 @@ This is a fun little application that functions as a soundboard for the classic 
 ## Usage
 
 1. Clone or download the repository.
-2. 
+2. Use the shell command npm start from the root directory 
 ```console
-npm start
+user_route:~/oneButton$ npm start
 ``` 
-3. OneButton is default to port 1337. (http://localhost:1337)
+3. OneButton default port is set to 1337. (http://localhost:1337)
 4. Click, tap, or press the designated keys to trigger sounds and animations.
 
 ### Demo
 
-You can see a live demo of the application here: [OneButton](https://www.one-button.netlify.app).
+You can see a live demo of the application here: [OneButton](https://one-button.netlify.app).
 
 ### Contributing
 
