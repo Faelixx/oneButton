@@ -210,7 +210,19 @@ button {
   min-width: 100%;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 764px) {
+  .doc {
+    padding-left: 145px;
+    padding-right: 145px;
+  }
+}
+@media only screen and (min-width: 1064px) {
+  .doc {
+    padding-left: 345px;
+    padding-right: 345px;
+  }
+}
+@media only screen and (min-width: 1440px) {
   .doc {
     padding-left: 545px;
     padding-right: 545px;
