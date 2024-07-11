@@ -220,15 +220,9 @@ button {
 }
 
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1025px) {
     .doc {
       padding-left: 545px;
       padding-right: 545px;
-    }
-  }
-  @media only screen and (min-width: 1025px) {
-    .doc {
-      padding-left: 400px;
-      padding-right: 400px;
     }
   }
